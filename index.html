@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goat On Gas ($GOG) | The Alpha of Polygon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@800&display=swap');
+      
+      :root {
+        --neon-purple: #a855f7;
+        --neon-blue: #3b82f6;
+        --deep-bg: #030303;
+      }
+
+      body {
+        font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+        background-color: var(--deep-bg);
+        color: #f1f5f9;
+        overflow-x: hidden;
+      }
+
+      .font-heading {
+        font-family: 'Bricolage Grotesque', sans-serif;
+      }
+
+      /* Mesh Gradient Background */
+      .mesh-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: #030303;
+        background-image: 
+          radial-gradient(at 0% 0%, hsla(273, 67%, 15%, 1) 0, transparent 50%), 
+          radial-gradient(at 50% 0%, hsla(225, 67%, 15%, 1) 0, transparent 50%), 
+          radial-gradient(at 100% 0%, hsla(339, 67%, 15%, 1) 0, transparent 50%);
+        opacity: 0.6;
+      }
+
+      .glow-purple { box-shadow: 0 0 30px rgba(168, 85, 247, 0.25); }
+      .text-glow-purple { text-shadow: 0 0 15px rgba(168, 85, 247, 0.5); }
+      
+      .glass {
+        background: rgba(15, 15, 20, 0.7);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #fff 0%, #a855f7 50%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(168, 85, 247, 0.5);
+      }
+
+      @keyframes slide-infinite {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+
+      .ticker-animate {
+        animation: slide-infinite 30s linear infinite;
+      }
+
+      .fluid-h1 { font-size: clamp(2.5rem, 10vw, 6rem); line-height: 0.95; letter-spacing: -0.04em; }
+      .fluid-h2 { font-size: clamp(2rem, 5vw, 4rem); letter-spacing: -0.02em; }
+
+      /* Smooth Scroll */
+      html { scroll-behavior: smooth; }
+
+      /* Custom Selection */
+      ::selection {
+        background: #a855f7;
+        color: white;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div class="mesh-bg"></div>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
